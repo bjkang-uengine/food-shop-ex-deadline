@@ -29,7 +29,7 @@ public class Menu {
         return menuRepository;
     }
 
-    public static void stockDecrease(DeliveryStarted deliveryStarted) {
+    public static void stockDecrease(Accepted accepted) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -40,7 +40,7 @@ public class Menu {
 
         /** Example 2:  finding and process
         
-        repository().findById(deliveryStarted.get???()).ifPresent(menu->{
+        repository().findById(accepted.get???()).ifPresent(menu->{
             
             menu // do something
             repository().save(menu);
