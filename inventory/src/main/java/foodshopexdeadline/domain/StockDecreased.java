@@ -10,6 +10,9 @@ import lombok.*;
 public class StockDecreased extends AbstractEvent {
 
     private Long id;
+    private String menuName;
+    private Integer stock;
+    private String orderId;
 
     public StockDecreased(Menu aggregate) {
         super(aggregate);

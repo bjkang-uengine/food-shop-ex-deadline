@@ -8,8 +8,8 @@ Vue.use(Router);
 import StoreOrderManager from "./components/listers/StoreOrderCards"
 import StoreOrderDetail from "./components/listers/StoreOrderDetail"
 
-import OederManager from "./components/listers/OederCards"
-import OederDetail from "./components/listers/OederDetail"
+import OrderManager from "./components/listers/OrderCards"
+import OrderDetail from "./components/listers/OrderDetail"
 
 import DeliveryManager from "./components/listers/DeliveryCards"
 import DeliveryDetail from "./components/listers/DeliveryDetail"
@@ -37,14 +37,14 @@ export default new Router({
             },
 
             {
-                path: '/oeders',
-                name: 'OederManager',
-                component: OederManager
+                path: '/orders',
+                name: 'OrderManager',
+                component: OrderManager
             },
             {
-                path: '/oeders/:id',
-                name: 'OederDetail',
-                component: OederDetail
+                path: '/orders/:id',
+                name: 'OrderDetail',
+                component: OrderDetail
             },
 
             {

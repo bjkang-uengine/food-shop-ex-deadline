@@ -1,8 +1,8 @@
 package foodshopexdeadline.domain;
 
 import foodshopexdeadline.OrderApplication;
-import foodshopexdeadline.domain.OderCreated;
 import foodshopexdeadline.domain.OrderCancelled;
+import foodshopexdeadline.domain.OrderCreated;
 import foodshopexdeadline.domain.OrderPlaced;
 import java.util.Date;
 import java.util.List;
@@ -10,9 +10,9 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Oeder_table")
+@Table(name = "Order_table")
 @Data
-public class Oeder {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,8 +30,8 @@ public class Oeder {
 
     @PostPersist
     public void onPostPersist() {
-        OderCreated oderCreated = new OderCreated(this);
-        oderCreated.publishAfterCommit();
+        OrderCreated orderCreated = new OrderCreated(this);
+        orderCreated.publishAfterCommit();
 
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
@@ -43,28 +43,28 @@ public class Oeder {
         orderCancelled.publishAfterCommit();
     }
 
-    public static OederRepository repository() {
-        OederRepository oederRepository = OrderApplication.applicationContext.getBean(
-            OederRepository.class
+    public static OrderRepository repository() {
+        OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
+            OrderRepository.class
         );
-        return oederRepository;
+        return orderRepository;
     }
 
     public static void updateStatus(DeliveryStarted deliveryStarted) {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(deliveryStarted.get???()).ifPresent(oeder->{
+        repository().findById(deliveryStarted.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -76,17 +76,17 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(accepted.get???()).ifPresent(oeder->{
+        repository().findById(accepted.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -98,17 +98,17 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(cookFinished.get???()).ifPresent(oeder->{
+        repository().findById(cookFinished.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -120,21 +120,21 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
-        OrderCancelled orderCancelled = new OrderCancelled(oeder);
+        OrderCancelled orderCancelled = new OrderCancelled(order);
         orderCancelled.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(rejected.get???()).ifPresent(oeder->{
+        repository().findById(rejected.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
-            OrderCancelled orderCancelled = new OrderCancelled(oeder);
+            OrderCancelled orderCancelled = new OrderCancelled(order);
             orderCancelled.publishAfterCommit();
 
          });
@@ -146,21 +146,21 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
-        OrderCancelled orderCancelled = new OrderCancelled(oeder);
+        OrderCancelled orderCancelled = new OrderCancelled(order);
         orderCancelled.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(deadlineReached.get???()).ifPresent(oeder->{
+        repository().findById(deadlineReached.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
-            OrderCancelled orderCancelled = new OrderCancelled(oeder);
+            OrderCancelled orderCancelled = new OrderCancelled(order);
             orderCancelled.publishAfterCommit();
 
          });
@@ -172,21 +172,21 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
-        OrderCancelled orderCancelled = new OrderCancelled(oeder);
+        OrderCancelled orderCancelled = new OrderCancelled(order);
         orderCancelled.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(deliveryFailed.get???()).ifPresent(oeder->{
+        repository().findById(deliveryFailed.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
-            OrderCancelled orderCancelled = new OrderCancelled(oeder);
+            OrderCancelled orderCancelled = new OrderCancelled(order);
             orderCancelled.publishAfterCommit();
 
          });
@@ -198,21 +198,21 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
-        OrderCancelled orderCancelled = new OrderCancelled(oeder);
+        OrderCancelled orderCancelled = new OrderCancelled(order);
         orderCancelled.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(stockDecreasFailed.get???()).ifPresent(oeder->{
+        repository().findById(stockDecreasFailed.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
-            OrderCancelled orderCancelled = new OrderCancelled(oeder);
+            OrderCancelled orderCancelled = new OrderCancelled(order);
             orderCancelled.publishAfterCommit();
 
          });
@@ -224,21 +224,21 @@ public class Oeder {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Oeder oeder = new Oeder();
-        repository().save(oeder);
+        Order order = new Order();
+        repository().save(order);
 
-        OrderPlaced orderPlaced = new OrderPlaced(oeder);
+        OrderPlaced orderPlaced = new OrderPlaced(order);
         orderPlaced.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(deliveryCompleted.get???()).ifPresent(oeder->{
+        repository().findById(deliveryCompleted.get???()).ifPresent(order->{
             
-            oeder // do something
-            repository().save(oeder);
+            order // do something
+            repository().save(order);
 
-            OrderPlaced orderPlaced = new OrderPlaced(oeder);
+            OrderPlaced orderPlaced = new OrderPlaced(order);
             orderPlaced.publishAfterCommit();
 
          });

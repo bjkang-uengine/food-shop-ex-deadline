@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
 - order
 ```
- http :8088/oeders id="id" customerId="customerId" address="address" menuId="menuId" status="status" qty="qty" 
+ http :8088/orders id="id" customerId="customerId" address="address" menuId="menuId" status="status" qty="qty" 
 ```
 - delivery
 ```
@@ -52,7 +52,7 @@ mvn spring-boot:run
 ```
 - inventory
 ```
- http :8088/menus id="id" menuName="menuName" stock="stock" 
+ http :8088/menus id="id" menuName="menuName" stock="stock" orderId="orderId" 
 ```
 
 

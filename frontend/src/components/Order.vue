@@ -10,10 +10,10 @@
         </template>
 
         <v-card-title v-if="value._links">
-            Oeder # {{value._links.self.href.split("/")[value._links.self.href.split("/").length - 1]}}
+            Order # {{value._links.self.href.split("/")[value._links.self.href.split("/").length - 1]}}
         </v-card-title >
         <v-card-title v-else>
-            Oeder
+            Order
         </v-card-title >
 
         <v-card-text>
@@ -84,7 +84,7 @@
 
 
     export default {
-        name: 'Oeder',
+        name: 'Order',
         components:{
         },
         props: {
@@ -136,7 +136,7 @@
 
                     if(!this.offline) {
                         if(this.isNew) {
-                            temp = await axios.post(axios.fixUrl('/oeders'), this.value)
+                            temp = await axios.post(axios.fixUrl('/orders'), this.value)
                         } else {
                             temp = await axios.put(axios.fixUrl(this.value._links.self.href), this.value)
                         }

@@ -35,7 +35,7 @@ public class Deadline {
         return deadlineRepository;
     }
 
-    public static void schedule(OderCreated oderCreated) {
+    public static void schedule(OrderCreated orderCreated) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -46,7 +46,7 @@ public class Deadline {
 
         /** Example 2:  finding and process
         
-        repository().findById(oderCreated.get???()).ifPresent(deadline->{
+        repository().findById(orderCreated.get???()).ifPresent(deadline->{
             
             deadline // do something
             repository().save(deadline);

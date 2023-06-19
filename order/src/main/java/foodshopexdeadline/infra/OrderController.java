@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-// @RequestMapping(value="/oeders")
+// @RequestMapping(value="/orders")
 @Transactional
-public class OederController {
+public class OrderController {
 
     @Autowired
-    OederRepository oederRepository;
+    OrderRepository orderRepository;
 }

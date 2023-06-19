@@ -24,14 +24,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='OderCreated'"
+        condition = "headers['type']=='OrderCreated'"
     )
-    public void wheneverOderCreated_AddOrderList(
-        @Payload OderCreated oderCreated
+    public void wheneverOrderCreated_AddOrderList(
+        @Payload OrderCreated orderCreated
     ) {
-        OderCreated event = oderCreated;
+        OrderCreated event = orderCreated;
         System.out.println(
-            "\n\n##### listener AddOrderList : " + oderCreated + "\n\n"
+            "\n\n##### listener AddOrderList : " + orderCreated + "\n\n"
         );
 
         // Sample Logic //

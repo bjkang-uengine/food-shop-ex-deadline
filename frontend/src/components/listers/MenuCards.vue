@@ -70,6 +70,7 @@
             me.newValue = {
                 'menuName': '',
                 'stock': 0,
+                'orderId': '',
             }
         },
         methods:{

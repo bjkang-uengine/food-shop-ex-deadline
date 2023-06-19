@@ -21,6 +21,8 @@ public class Menu {
 
     private Integer stock;
 
+    private String orderId;
+
     @PostPersist
     public void onPostPersist() {
         StockDecreased stockDecreased = new StockDecreased(this);

@@ -4,6 +4,6 @@ import foodshopexdeadline.domain.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "oeders", path = "oeders")
-public interface OederRepository
-    extends PagingAndSortingRepository<Oeder, Long> {}
+@RepositoryRestResource(collectionResourceRel = "orders", path = "orders")
+public interface OrderRepository
+    extends PagingAndSortingRepository<Order, Long> {}

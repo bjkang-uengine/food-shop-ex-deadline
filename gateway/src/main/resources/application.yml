@@ -15,7 +15,7 @@ spring:
         - id: order
           uri: http://localhost:8083
           predicates:
-            - Path=/oeders/**, 
+            - Path=/orders/**, 
         - id: delivery
           uri: http://localhost:8085
           predicates:
@@ -58,7 +58,7 @@ spring:
         - id: order
           uri: http://order:8080
           predicates:
-            - Path=/oeders/**, 
+            - Path=/orders/**, 
         - id: delivery
           uri: http://delivery:8080
           predicates:

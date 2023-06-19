@@ -7,7 +7,7 @@ import lombok.*;
 
 @Data
 @ToString
-public class OderCreated extends AbstractEvent {
+public class OrderCreated extends AbstractEvent {
 
     private Long id;
     private String customerId;
@@ -15,12 +15,4 @@ public class OderCreated extends AbstractEvent {
     private String menuId;
     private String status;
     private Integer qty;
-
-    public OderCreated(Oeder aggregate) {
-        super(aggregate);
-    }
-
-    public OderCreated() {
-        super();
-    }
 }

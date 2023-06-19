@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "menuName", value: "menuName" },
                     { text: "stock", value: "stock" },
+                    { text: "orderId", value: "orderId" },
                 ],
             menu : [],
             newValue: {},
@@ -88,6 +89,7 @@
             this.newValue = {
                 'menuName': '',
                 'stock': 0,
+                'orderId': '',
             }
         },
         methods: {

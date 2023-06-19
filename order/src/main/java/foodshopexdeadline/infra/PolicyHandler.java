@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
-    OederRepository oederRepository;
+    OrderRepository orderRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
@@ -35,7 +35,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.updateStatus(event);
+        Order.updateStatus(event);
     }
 
     @StreamListener(
@@ -49,7 +49,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.updateStatus(event);
+        Order.updateStatus(event);
     }
 
     @StreamListener(
@@ -65,7 +65,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.updateStatus(event);
+        Order.updateStatus(event);
     }
 
     @StreamListener(
@@ -79,7 +79,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.orderReject(event);
+        Order.orderReject(event);
     }
 
     @StreamListener(
@@ -95,7 +95,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.orderReject(event);
+        Order.orderReject(event);
     }
 
     @StreamListener(
@@ -111,7 +111,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.orderReject(event);
+        Order.orderReject(event);
     }
 
     @StreamListener(
@@ -127,7 +127,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.orderReject(event);
+        Order.orderReject(event);
     }
 
     @StreamListener(
@@ -143,6 +143,6 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Oeder.approve(event);
+        Order.approve(event);
     }
 }

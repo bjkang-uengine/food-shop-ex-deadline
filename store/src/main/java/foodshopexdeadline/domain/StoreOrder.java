@@ -63,7 +63,7 @@ public class StoreOrder {
         cookFinished.publishAfterCommit();
     }
 
-    public static void addOrderList(OderCreated oderCreated) {
+    public static void addOrderList(OrderCreated orderCreated) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -76,7 +76,7 @@ public class StoreOrder {
 
         /** Example 2:  finding and process
         
-        repository().findById(oderCreated.get???()).ifPresent(storeOrder->{
+        repository().findById(orderCreated.get???()).ifPresent(storeOrder->{
             
             storeOrder // do something
             repository().save(storeOrder);
