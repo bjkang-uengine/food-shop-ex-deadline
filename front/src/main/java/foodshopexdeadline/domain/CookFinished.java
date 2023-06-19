@@ -9,10 +9,11 @@ import lombok.*;
 @ToString
 public class CookFinished extends AbstractEvent {
 
-    private Long id;
+    private String orderId;
     private String oderId;
     private String menuId;
     private String customerId;
     private String adress;
     private String status;
+    private Integer qty;
 }

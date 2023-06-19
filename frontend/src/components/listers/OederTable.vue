@@ -71,6 +71,7 @@
                     { text: "address", value: "address" },
                     { text: "menuId", value: "menuId" },
                     { text: "status", value: "status" },
+                    { text: "qty", value: "qty" },
                 ],
             oeder : [],
             newValue: {},
@@ -92,6 +93,7 @@
                 'address': '',
                 'menuId': '',
                 'status': '',
+                'qty': 0,
             }
         },
         methods: {

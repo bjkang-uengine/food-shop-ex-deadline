@@ -21,6 +21,7 @@
             <String label="Address" v-model="value.address" :editMode="editMode"/>
             <String label="MenuId" v-model="value.menuId" :editMode="editMode"/>
             <String label="Status" v-model="value.status" :editMode="editMode"/>
+            <Number label="Qty" v-model="value.qty" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

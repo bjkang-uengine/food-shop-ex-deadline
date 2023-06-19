@@ -26,6 +26,8 @@ public class Oeder {
 
     private String status;
 
+    private Integer qty;
+
     @PostPersist
     public void onPostPersist() {
         OderCreated oderCreated = new OderCreated(this);

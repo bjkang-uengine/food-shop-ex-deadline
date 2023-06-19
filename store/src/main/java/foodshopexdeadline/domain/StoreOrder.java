@@ -25,6 +25,8 @@ public class StoreOrder {
 
     private String status;
 
+    private Integer qty;
+
     @PostPersist
     public void onPostPersist() {}
 
