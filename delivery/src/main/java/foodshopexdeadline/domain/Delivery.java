@@ -1,9 +1,7 @@
 package foodshopexdeadline.domain;
 
 import foodshopexdeadline.DeliveryApplication;
-import foodshopexdeadline.domain.DeliveryCompleted;
 import foodshopexdeadline.domain.DeliveryFailed;
-import foodshopexdeadline.domain.DeliveryStarted;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -16,7 +14,7 @@ public class Delivery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String orderId;
 
     private String customerId;
 
@@ -24,16 +22,8 @@ public class Delivery {
 
     private String status;
 
-    private String oderId;
-
     @PostPersist
     public void onPostPersist() {
-        DeliveryStarted deliveryStarted = new DeliveryStarted(this);
-        deliveryStarted.publishAfterCommit();
-
-        DeliveryCompleted deliveryCompleted = new DeliveryCompleted(this);
-        deliveryCompleted.publishAfterCommit();
-
         DeliveryFailed deliveryFailed = new DeliveryFailed(this);
         deliveryFailed.publishAfterCommit();
     }
@@ -43,6 +33,20 @@ public class Delivery {
             DeliveryRepository.class
         );
         return deliveryRepository;
+    }
+
+    public void pickup() {
+        //implement business logic here:
+
+        DeliveryStarted deliveryStarted = new DeliveryStarted(this);
+        deliveryStarted.publishAfterCommit();
+    }
+
+    public void deliveryCompleted() {
+        //implement business logic here:
+
+        DeliveryCompleted deliveryCompleted = new DeliveryCompleted(this);
+        deliveryCompleted.publishAfterCommit();
     }
 
     public static void addDeliveryList(Accepted accepted) {

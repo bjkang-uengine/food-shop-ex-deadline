@@ -44,7 +44,7 @@ mvn spring-boot:run
 ```
 - delivery
 ```
- http :8088/deliveries id="id" customerId="customerId" address="address" status="status" oderId="oderId" 
+ http :8088/deliveries orderId="orderId" customerId="customerId" address="address" status="status" 
 ```
 - deadline
 ```

@@ -1,7 +1,6 @@
 package foodshopexdeadline.domain;
 
 import foodshopexdeadline.StoreApplication;
-import foodshopexdeadline.domain.Accepted;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -27,16 +26,20 @@ public class StoreOrder {
     private String status;
 
     @PostPersist
-    public void onPostPersist() {
-        Accepted accepted = new Accepted(this);
-        accepted.publishAfterCommit();
-    }
+    public void onPostPersist() {}
 
     public static StoreOrderRepository repository() {
         StoreOrderRepository storeOrderRepository = StoreApplication.applicationContext.getBean(
             StoreOrderRepository.class
         );
         return storeOrderRepository;
+    }
+
+    public void accept() {
+        //implement business logic here:
+
+        Accepted accepted = new Accepted(this);
+        accepted.publishAfterCommit();
     }
 
     public void reject() {

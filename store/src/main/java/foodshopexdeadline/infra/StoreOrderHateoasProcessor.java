@@ -14,6 +14,11 @@ public class StoreOrderHateoasProcessor
     public EntityModel<StoreOrder> process(EntityModel<StoreOrder> model) {
         model.add(
             Link
+                .of(model.getRequiredLink("self").getHref() + "/accept")
+                .withRel("accept")
+        );
+        model.add(
+            Link
                 .of(model.getRequiredLink("self").getHref() + "/reject")
                 .withRel("reject")
         );
