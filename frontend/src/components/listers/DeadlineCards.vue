@@ -68,6 +68,9 @@
             me.values = temp.data._embedded.deadlines;
             
             me.newValue = {
+                'deadline': '2023-06-19',
+                'sratedTime': '2023-06-19',
+                'orderId': '',
             }
         },
         methods:{

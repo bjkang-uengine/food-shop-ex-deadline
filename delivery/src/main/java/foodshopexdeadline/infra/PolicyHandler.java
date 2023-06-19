@@ -24,14 +24,12 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='CookFinished'"
+        condition = "headers['type']=='Accepted'"
     )
-    public void wheneverCookFinished_AddDeliveryList(
-        @Payload CookFinished cookFinished
-    ) {
-        CookFinished event = cookFinished;
+    public void wheneverAccepted_AddDeliveryList(@Payload Accepted accepted) {
+        Accepted event = accepted;
         System.out.println(
-            "\n\n##### listener AddDeliveryList : " + cookFinished + "\n\n"
+            "\n\n##### listener AddDeliveryList : " + accepted + "\n\n"
         );
 
         // Sample Logic //

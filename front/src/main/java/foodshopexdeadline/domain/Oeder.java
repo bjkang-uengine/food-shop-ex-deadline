@@ -20,7 +20,7 @@ public class Oeder {
 
     private String customerId;
 
-    private Address address;
+    private String address;
 
     private String menuId;
 
@@ -31,15 +31,15 @@ public class Oeder {
         OderCreated oderCreated = new OderCreated(this);
         oderCreated.publishAfterCommit();
 
-        OrderCancelled orderCancelled = new OrderCancelled(this);
-        orderCancelled.publishAfterCommit();
-
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
     }
 
     @PreRemove
-    public void onPreRemove() {}
+    public void onPreRemove() {
+        OrderCancelled orderCancelled = new OrderCancelled(this);
+        orderCancelled.publishAfterCommit();
+    }
 
     public static OederRepository repository() {
         OederRepository oederRepository = FrontApplication.applicationContext.getBean(

@@ -88,7 +88,7 @@
 
             this.newValue = {
                 'customerId': '',
-                'address': {},
+                'address': '',
                 'status': '',
             }
         },

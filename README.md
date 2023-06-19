@@ -48,7 +48,7 @@ mvn spring-boot:run
 ```
 - deadline
 ```
- http :8088/deadlines id="id" 
+ http :8088/deadlines id="id" deadline="deadline" sratedTime="sratedTime" orderId="orderId" 
 ```
 - inventory
 ```

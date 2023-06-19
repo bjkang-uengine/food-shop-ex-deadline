@@ -16,6 +16,12 @@ public class Deadline {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Date deadline;
+
+    private Date sratedTime;
+
+    private String orderId;
+
     @PostPersist
     public void onPostPersist() {
         DeadlineReached deadlineReached = new DeadlineReached(this);

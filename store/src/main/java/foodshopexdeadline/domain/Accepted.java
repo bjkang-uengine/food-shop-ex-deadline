@@ -10,6 +10,11 @@ import lombok.*;
 public class Accepted extends AbstractEvent {
 
     private Long id;
+    private String oderId;
+    private String menuId;
+    private String customerId;
+    private String adress;
+    private String status;
 
     public Accepted(StoreOrder aggregate) {
         super(aggregate);

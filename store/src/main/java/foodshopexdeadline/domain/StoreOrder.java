@@ -67,6 +67,8 @@ public class StoreOrder {
         StoreOrder storeOrder = new StoreOrder();
         repository().save(storeOrder);
 
+        Accepted accepted = new Accepted(storeOrder);
+        accepted.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -76,6 +78,8 @@ public class StoreOrder {
             storeOrder // do something
             repository().save(storeOrder);
 
+            Accepted accepted = new Accepted(storeOrder);
+            accepted.publishAfterCommit();
 
          });
         */

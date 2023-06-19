@@ -17,6 +17,9 @@
         </v-card-title >
 
         <v-card-text>
+            <Date label="Deadline" v-model="value.deadline" :editMode="editMode"/>
+            <Date label="SratedTime" v-model="value.sratedTime" :editMode="editMode"/>
+            <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

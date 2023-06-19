@@ -5,6 +5,15 @@
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <Date label="Deadline" v-model="item.deadline" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="SratedTime" v-model="item.sratedTime" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

@@ -69,7 +69,7 @@
             
             me.newValue = {
                 'customerId': '',
-                'address': {},
+                'address': '',
                 'status': '',
             }
         },

@@ -67,6 +67,9 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "deadline", value: "deadline" },
+                    { text: "sratedTime", value: "sratedTime" },
+                    { text: "orderId", value: "orderId" },
                 ],
             deadline : [],
             newValue: {},
@@ -84,6 +87,9 @@
             this.values = temp.data._embedded.deadlines;
 
             this.newValue = {
+                'deadline': '2023-06-19',
+                'sratedTime': '2023-06-19',
+                'orderId': '',
             }
         },
         methods: {

@@ -10,6 +10,9 @@ import lombok.*;
 public class DeliveryFailed extends AbstractEvent {
 
     private Long id;
+    private String customerId;
+    private String address;
+    private String status;
 
     public DeliveryFailed(Delivery aggregate) {
         super(aggregate);

@@ -20,8 +20,7 @@ public class Delivery {
 
     private String customerId;
 
-    @Embedded
-    private Address address;
+    private String address;
 
     private String status;
 
@@ -44,7 +43,7 @@ public class Delivery {
         return deliveryRepository;
     }
 
-    public static void addDeliveryList(CookFinished cookFinished) {
+    public static void addDeliveryList(Accepted accepted) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -55,7 +54,7 @@ public class Delivery {
 
         /** Example 2:  finding and process
         
-        repository().findById(cookFinished.get???()).ifPresent(delivery->{
+        repository().findById(accepted.get???()).ifPresent(delivery->{
             
             delivery // do something
             repository().save(delivery);

@@ -7,7 +7,12 @@ import lombok.*;
 
 @Data
 @ToString
-public class CookFinished extends AbstractEvent {
+public class Accepted extends AbstractEvent {
 
     private Long id;
+    private String oderId;
+    private String menuId;
+    private String customerId;
+    private String adress;
+    private String status;
 }
