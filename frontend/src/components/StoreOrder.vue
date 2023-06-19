@@ -18,7 +18,6 @@
 
         <v-card-text>
             <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
-            <String label="OderId" v-model="value.oderId" :editMode="editMode"/>
             <String label="MenuId" v-model="value.menuId" :editMode="editMode"/>
             <String label="CustomerId" v-model="value.customerId" :editMode="editMode"/>
             <String label="Adress" v-model="value.adress" :editMode="editMode"/>

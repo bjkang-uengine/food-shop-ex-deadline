@@ -1,6 +1,8 @@
 package foodshopexdeadline.domain;
 
 import foodshopexdeadline.InventoryApplication;
+import foodshopexdeadline.domain.StockDecreasFailed;
+import foodshopexdeadline.domain.StockDecreased;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -20,7 +22,13 @@ public class Menu {
     private String stock;
 
     @PostPersist
-    public void onPostPersist() {}
+    public void onPostPersist() {
+        StockDecreased stockDecreased = new StockDecreased(this);
+        stockDecreased.publishAfterCommit();
+
+        StockDecreasFailed stockDecreasFailed = new StockDecreasFailed(this);
+        stockDecreasFailed.publishAfterCommit();
+    }
 
     public static MenuRepository repository() {
         MenuRepository menuRepository = InventoryApplication.applicationContext.getBean(

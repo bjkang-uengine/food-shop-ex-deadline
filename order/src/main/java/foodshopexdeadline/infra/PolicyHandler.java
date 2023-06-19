@@ -116,6 +116,22 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='StockDecreasFailed'"
+    )
+    public void wheneverStockDecreasFailed_OrderReject(
+        @Payload StockDecreasFailed stockDecreasFailed
+    ) {
+        StockDecreasFailed event = stockDecreasFailed;
+        System.out.println(
+            "\n\n##### listener OrderReject : " + stockDecreasFailed + "\n\n"
+        );
+
+        // Sample Logic //
+        Oeder.orderReject(event);
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='DeliveryCompleted'"
     )
     public void wheneverDeliveryCompleted_Approve(

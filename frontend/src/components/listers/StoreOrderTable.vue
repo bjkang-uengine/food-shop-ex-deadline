@@ -67,7 +67,6 @@
             headers: 
                 [
                     { text: "orderId", value: "orderId" },
-                    { text: "oderId", value: "oderId" },
                     { text: "menuId", value: "menuId" },
                     { text: "customerId", value: "customerId" },
                     { text: "adress", value: "adress" },
@@ -91,7 +90,6 @@
 
             this.newValue = {
                 'orderId': '',
-                'oderId': '',
                 'menuId': '',
                 'customerId': '',
                 'adress': '',

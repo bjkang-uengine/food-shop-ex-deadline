@@ -69,7 +69,6 @@
             
             me.newValue = {
                 'orderId': '',
-                'oderId': '',
                 'menuId': '',
                 'customerId': '',
                 'adress': '',

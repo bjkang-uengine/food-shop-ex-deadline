@@ -15,12 +15,10 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ OderId :  {{data.oderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MenuId :  {{data.menuId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CustomerId :  {{data.customerId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Adress :  {{data.adress }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -108,7 +106,6 @@
             
             this.newValue = {
                 'orderId': '',
-                'oderId': '',
                 'menuId': '',
                 'customerId': '',
                 'adress': '',

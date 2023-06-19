@@ -194,6 +194,32 @@ public class Oeder {
 
     }
 
+    public static void orderReject(StockDecreasFailed stockDecreasFailed) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Oeder oeder = new Oeder();
+        repository().save(oeder);
+
+        OrderCancelled orderCancelled = new OrderCancelled(oeder);
+        orderCancelled.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(stockDecreasFailed.get???()).ifPresent(oeder->{
+            
+            oeder // do something
+            repository().save(oeder);
+
+            OrderCancelled orderCancelled = new OrderCancelled(oeder);
+            orderCancelled.publishAfterCommit();
+
+         });
+        */
+
+    }
+
     public static void approve(DeliveryCompleted deliveryCompleted) {
         //implement business logic here:
 
