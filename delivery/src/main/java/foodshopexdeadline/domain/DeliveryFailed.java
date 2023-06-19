@@ -13,6 +13,7 @@ public class DeliveryFailed extends AbstractEvent {
     private String customerId;
     private String address;
     private String status;
+    private String oderId;
 
     public DeliveryFailed(Delivery aggregate) {
         super(aggregate);

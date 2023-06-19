@@ -71,6 +71,7 @@
                 'customerId': '',
                 'address': '',
                 'status': '',
+                'oderId': '',
             }
         },
         methods:{

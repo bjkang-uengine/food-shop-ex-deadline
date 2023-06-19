@@ -24,6 +24,8 @@ public class Delivery {
 
     private String status;
 
+    private String oderId;
+
     @PostPersist
     public void onPostPersist() {
         DeliveryStarted deliveryStarted = new DeliveryStarted(this);

@@ -14,7 +14,7 @@ public class StoreOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String orderId;
 
     private String oderId;
 

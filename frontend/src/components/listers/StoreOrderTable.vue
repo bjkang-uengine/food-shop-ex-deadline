@@ -66,7 +66,7 @@
             values: [],
             headers: 
                 [
-                    { text: "id", value: "id" },
+                    { text: "orderId", value: "orderId" },
                     { text: "oderId", value: "oderId" },
                     { text: "menuId", value: "menuId" },
                     { text: "customerId", value: "customerId" },
@@ -89,6 +89,7 @@
             this.values = temp.data._embedded.storeorders;
 
             this.newValue = {
+                'orderId': '',
                 'oderId': '',
                 'menuId': '',
                 'customerId': '',

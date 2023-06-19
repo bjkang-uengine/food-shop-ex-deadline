@@ -24,7 +24,7 @@ public class StoreOrderController {
         produces = "application/json;charset=UTF-8"
     )
     public StoreOrder reject(
-        @PathVariable(value = "id") Long id,
+        @PathVariable(value = "id") String id,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {
@@ -47,7 +47,7 @@ public class StoreOrderController {
         produces = "application/json;charset=UTF-8"
     )
     public StoreOrder startCook(
-        @PathVariable(value = "id") Long id,
+        @PathVariable(value = "id") String id,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {
@@ -70,7 +70,7 @@ public class StoreOrderController {
         produces = "application/json;charset=UTF-8"
     )
     public StoreOrder finishCook(
-        @PathVariable(value = "id") Long id,
+        @PathVariable(value = "id") String id,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {

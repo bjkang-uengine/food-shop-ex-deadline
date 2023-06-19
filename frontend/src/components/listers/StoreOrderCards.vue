@@ -68,6 +68,7 @@
             me.values = temp.data._embedded.storeOrders;
             
             me.newValue = {
+                'orderId': '',
                 'oderId': '',
                 'menuId': '',
                 'customerId': '',
