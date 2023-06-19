@@ -2,7 +2,7 @@ package foodshopexdeadline.infra;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import foodshopexdeadline.FrontApplication;
+import foodshopexdeadline.OrderApplication;
 import foodshopexdeadline.config.kafka.KafkaProcessor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.messaging.MessageChannel;
@@ -31,7 +31,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = FrontApplication.applicationContext.getBean(
+        KafkaProcessor processor = OrderApplication.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

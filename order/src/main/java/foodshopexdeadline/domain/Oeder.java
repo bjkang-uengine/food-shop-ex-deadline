@@ -1,6 +1,6 @@
 package foodshopexdeadline.domain;
 
-import foodshopexdeadline.FrontApplication;
+import foodshopexdeadline.OrderApplication;
 import foodshopexdeadline.domain.OderCreated;
 import foodshopexdeadline.domain.OrderCancelled;
 import foodshopexdeadline.domain.OrderPlaced;
@@ -44,7 +44,7 @@ public class Oeder {
     }
 
     public static OederRepository repository() {
-        OederRepository oederRepository = FrontApplication.applicationContext.getBean(
+        OederRepository oederRepository = OrderApplication.applicationContext.getBean(
             OederRepository.class
         );
         return oederRepository;

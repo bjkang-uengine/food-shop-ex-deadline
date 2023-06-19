@@ -1,9 +1,9 @@
 package foodshopexdeadline.common;
 
-import foodshopexdeadline.FrontApplication;
+import foodshopexdeadline.OrderApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = { FrontApplication.class })
+@SpringBootTest(classes = { OrderApplication.class })
 public class CucumberSpingConfiguration {}

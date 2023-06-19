@@ -21,7 +21,7 @@ cd /bin
 See the README.md files inside the each microservices directory:
 
 - store
-- front
+- order
 - delivery
 - deadline
 - inventory
@@ -38,7 +38,7 @@ mvn spring-boot:run
 ```
  http :8088/storeOrders orderId="OrderId" oderId="oderId" menuId="menuId" customerId="customerId" adress="adress" status="status" qty="qty" 
 ```
-- front
+- order
 ```
  http :8088/oeders id="id" customerId="customerId" address="address" menuId="menuId" status="status" qty="qty" 
 ```
