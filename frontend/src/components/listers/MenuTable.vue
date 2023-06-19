@@ -87,7 +87,7 @@
 
             this.newValue = {
                 'menuName': '',
-                'stock': '',
+                'stock': 0,
             }
         },
         methods: {

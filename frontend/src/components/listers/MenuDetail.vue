@@ -9,7 +9,7 @@
                 <String label="MenuName" v-model="item.menuName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="Stock" v-model="item.stock" :editMode="editMode" @change="change" />
+                <Number label="Stock" v-model="item.stock" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

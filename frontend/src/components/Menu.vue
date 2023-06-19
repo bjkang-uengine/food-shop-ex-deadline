@@ -18,7 +18,7 @@
 
         <v-card-text>
             <String label="MenuName" v-model="value.menuName" :editMode="editMode"/>
-            <String label="Stock" v-model="value.stock" :editMode="editMode"/>
+            <Number label="Stock" v-model="value.stock" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

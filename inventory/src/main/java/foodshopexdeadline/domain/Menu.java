@@ -19,7 +19,7 @@ public class Menu {
 
     private String menuName;
 
-    private String stock;
+    private Integer stock;
 
     @PostPersist
     public void onPostPersist() {
